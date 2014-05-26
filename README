@@ -1,0 +1,25 @@
+Matei Oprea 332CA
+Tema 4 Prolog
+
+Rezolvare tema: 
+
+În primul rând, ca să rezolv tema a trebuit să știu cum vreau să mă mișc. 
+
+Un desen: 
+
+                  __
+	        _|_ |
+	       || | |
+	       |__| |etc...
+
+merg in cerc, după ce am făcut o rotație completă, mă duc în nord și o iau de la capăt cu un alt pas. 
+
+Am implementat utilizand un semafor care-mi spune daca am facut pickBox sau nu ca sa stiu ce fac mai departe. 
+Variabila contor(_) îmi zice dacă o să trec în aceeași stare sau nu. Daca e 0, e ultima mișcare de move(_) pe care o fac, dacă e mai mare ca 0 o să rămân în aceeași stare move(_). Adică, dacă sunt in starea move(north) și contor > 0, urmatoarea stare o să fie tot move(north).
+
+Dacă ajung într-o căsuță în care am box, fac pickBox. 
+Dacă am făcut pickBox, verific dacă trebuie să merg într-o parte sau alta, sau să rămân pe loc. Dacă sunt în (0, 0) fac deliverBox, altfel fac moveWithBox(direcția_spre_0, 0). 
+
+Probleme apărute: 
+
+Cred că am o problemă la un calcul sau ceva de nu trec celelalte teste. În teorie sună destul de bine ceea ce am făcut și nu ar fi trebui să facă asta.
